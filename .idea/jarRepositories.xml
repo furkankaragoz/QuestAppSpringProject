@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="releases" />
+      <option name="name" value="proj-bics-cac-tr-release" />
+      <option name="url" value="https://arm.epk.ericsson.se/artifactory/proj-bics-cac-tr-release/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="local-releases" />
+      <option name="name" value="proj-bics-cac-tr-release" />
+      <option name="url" value="https://arm.epk.ericsson.se/artifactory/proj-bics-cac-tr-release-local/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="tr-remote" />
+      <option name="name" value="proj-bics-cac-tr-dev" />
+      <option name="url" value="https://arm.epk.ericsson.se/artifactory/proj-bics-cac-tr-remote/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="snapshots" />
+      <option name="name" value="proj-bics-cac-tr-dev" />
+      <option name="url" value="https://arm.epk.ericsson.se/artifactory/proj-bics-cac-tr-dev/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="tr-ext" />
+      <option name="name" value="proj-bics-cac-tr-dev" />
+      <option name="url" value="https://arm.epk.ericsson.se/artifactory/proj-bics-cac-tr-external/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="pub-remote" />
+      <option name="name" value="proj-bics-cac-tr-public-remote" />
+      <option name="url" value="https://arm.epk.ericsson.se/artifactory/proj-bics-cac-tr-public-remote/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="sero-central" />
+      <option name="name" value="armserogic-releases" />
+      <option name="url" value="https://arm.sero.gic.ericsson.se/artifactory/proj-jcat-release-local" />
+    </remote-repository>
+  </component>
+</project>
