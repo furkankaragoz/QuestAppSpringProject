@@ -2,7 +2,7 @@ package com.example.questappspringproject.controllers;
 
 
 import com.example.questappspringproject.entities.User;
-import com.example.questappspringproject.repository.UserRepository;
+import com.example.questappspringproject.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,50 +13,38 @@ import java.util.Optional;
 @RequestMapping("/users")
 public class UserController {
 
-    @Autowired
-    private UserRepository userRepository;
+    private UserService userService;
 
-    /*
-    public UserController(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }*/
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping
     public List<User> getAllUsers() {
-        return userRepository.findAll();
+        return userService.getAllUsers();
     }
 
 
 
     @PostMapping
     public User createUser(@RequestBody User newUser) {
-        return userRepository.save(newUser);
+        return userService.saveUser(newUser);
     }
 
     @GetMapping("/{userId}")
     public User getUser(@PathVariable Long userId) {
         // custom exception will add.
-        return userRepository.findById(userId).orElse(null);
+        return userService.getUser(userId);
     }
 
     @PutMapping("/{userId}")
     public User updateUser(@PathVariable Long userId, @RequestBody User updateUser) {
-        Optional<User> user = userRepository.findById(userId);
-        if (user.isPresent()) {
-            User foundUser = user.get();
-            foundUser.setUserName(updateUser.getUserName());
-            foundUser.setPassword(updateUser.getPassword());
-            userRepository.save(foundUser);
-            return foundUser;
-        }
-        else{
-            return null;
-        }
+        return userService.updateUser(userId,updateUser);
     }
 
     @DeleteMapping("/{userId}")
     public void deleteUser(@PathVariable Long userId) {
-        userRepository.deleteById(userId);
+        userService.deleteUser(userId);
     }
 
 }
